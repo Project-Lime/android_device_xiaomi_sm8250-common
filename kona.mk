@@ -371,6 +371,12 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
 
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch-service.xiaomi
+
+$(call soong_config_set, XIAOMI_TOUCH, HIGH_TOUCH_POLLING_PATH, /sys/devices/virtual/touch/touch_dev/bump_sample_rate)
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.qti \
