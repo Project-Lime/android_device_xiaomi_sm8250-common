@@ -124,16 +124,6 @@ on boot
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/device/extldo
     chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
 
-    # add for power data upload
-    chown system system /sys/power/sum_wakeup_time
-    chmod 0660 /sys/power/sum_wakeup_time
-    chown system system /sys/power/last_wake_time
-    chmod 0660 /sys/power/last_wake_time
-    chown system system /sys/power/wake_times
-    chmod 0660 /sys/power/wake_times
-    chown system system /sys/power/screen_off_flag
-    chmod 0660 /sys/power/screen_off_flag
-
     # This location is used by QCRIL to host UNIX domain
     # socket files used for internal IPC within QCRIL
     # modules
