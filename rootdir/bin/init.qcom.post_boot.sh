@@ -3902,9 +3902,6 @@ case "$target" in
         echo 2 > /sys/devices/system/cpu/cpu_boost/sched_boost_on_input
         echo "0:1516800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
         echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
-        echo 1 > /sys/devices/system/cpu/cpu_boost/sched_boost_on_powerkey_input
-        echo "0:1804800 1:0 2:0 3:0 4:0 5:0 6:2208000 7:2400000" > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq
-        echo 400 > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_ms
 
         # Set Memory parameters
         configure_memory_parameters
@@ -4070,9 +4067,6 @@ case "$target" in
         echo 2 > /sys/devices/system/cpu/cpu_boost/sched_boost_on_input
         echo "0:1516800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
         echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
-        echo 1 > /sys/devices/system/cpu/cpu_boost/sched_boost_on_powerkey_input
-        echo "0:1804800 1:0 2:0 3:0 4:0 5:0 6:2208000 7:0" > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq
-        echo 400 > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_ms
 
         # Set Memory parameters
         configure_memory_parameters
@@ -5736,8 +5730,6 @@ case "$target" in
 	# configure input boost settings
 	echo "0:1344000" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
 	echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
-	echo "0:1804800 1:0 2:0 3:0 4:2419200 5:0 6:0 7:3187200" > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq
-	echo 400 > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_ms
 
 	# configure governor settings for gold cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
